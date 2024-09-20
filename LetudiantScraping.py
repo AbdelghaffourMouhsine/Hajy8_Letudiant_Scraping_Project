@@ -164,7 +164,7 @@ class LetudiantScraping:
                 current_url = str(self.driver.current_url).strip()
                 print(current_url)
                 result = self.get_ecoles()
-                pagination_li_s = self.get_element("/html/body/div[10]/section[5]/div[2]/div/ul/li", group=True)
+                pagination_li_s = self.get_element("/html/body/div[10]/section[5]/div[2]/div[1]/ul/li", group=True)
                 if pagination_li_s["status"]:
                     pagination_li_s = pagination_li_s["data"]
                     if len(pagination_li_s)>0:
